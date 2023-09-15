@@ -43,21 +43,21 @@ servers = [
         'hostname': '192.168.0.111',
         'username': 'root',
         # 'password': 'your_password',
-        'key_filename': r'E:\NO_BACKUP\zzzzzz\ssh_command_local_cron_py\ubuntu_vm_rsa',
+        'key_filename': r'E:\PATH\to\private_key\PRIVATE_KEY_FILE_NAME',
         'command': 'ls -l',
     },
     {
         'hostname': '192.168.0.111',
         'username': 'root',
         # 'password': 'your_password',
-        'key_filename': r'E:\NO_BACKUP\zzzzzz\ssh_command_local_cron_py\ubuntu_vm_rsa',
+        'key_filename': r'E:\PATH\to\private_key\PRIVATE_KEY_FILE_NAME',
         'command': 'df -h',
     },
 ]
 
 # Define the time interval in seconds
-# interval = 600    # 10 minutes
-interval = 10    # ! For Testing Purpose - 10 seconds
+interval = 600    # 10 minutes
+# interval = 10    # ! For Testing Purpose Only - 10 seconds
 
 # Function to SSH into a server, run a command, and log the output
 def ssh_and_run_command(server_info, log_file, loop_count):
